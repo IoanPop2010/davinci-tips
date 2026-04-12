@@ -1,8 +1,43 @@
 :root {
-    --bg: #050608;
-    --card: #0f111a;
-    --accent: #6c5ce7;
-    --text: #ffffff;
+    --bg: #000000;           /* Negru pur */
+    --card: #0a0a0a;         /* Gri-negru pentru carduri */
+    --accent: #ff7e33;       /* Portocaliul specific Blackmagic */
+    --accent-hover: #e66a20; /* Portocaliu mai închis pentru hover */
+    --text: #ffffff;         /* Alb pur pentru text */
+    --text-dim: #b3b3b3;     /* Gri pentru text secundar */
+    --border: #1f1f1f;       /* Border discret */
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+/* Modifică și bara de navigare să fie neagră complet */
+nav {
+    background: #000000;
+    padding: 1.2rem 0;
+    border-bottom: 2px solid var(--accent);
+}
+
+.logo { color: var(--accent); font-weight: 800; }
+
+.links a:hover { color: var(--accent); }
+
+/* Ajustăm butoanele și cardurile */
+.tip-card, .category-block, .tip {
+    background: var(--card);
+    border: 1px solid var(--border);
+}
+
+.total-sticky {
+    background: var(--accent) !important; /* Bara de preț devine portocalie */
+}
+
+button, .btn {
+    background-color: var(--accent);
 }
 
 body {
