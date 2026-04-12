@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurator Rack Pro - DVR Tips</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .config-section { margin-bottom: 30px; }
+        select { 
+            width: 100%; padding: 12px; background: #050608; color: white; 
+            border: 1px solid #2d2d2d; border-radius: 5px; cursor: pointer;
+        }
+        .total-box {
+            position: sticky; bottom: 20px; background: var(--accent);
+            padding: 20px; border-radius: 10px; text-align: center;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.5);
+        }
+        .total-box h2 { margin: 0; color: white; }
+        .details-panel { font-size: 0.9rem; color: #aaa; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">DVR Tips</a>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="configurator.html">Configurator</a>
+                <a href="echipament.html">Lista Fixă</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Configurator Rack Studio</h1>
+        <p>Selectează componentele pentru a estima costul total al infrastructurii tale.</p>
+
+        <div class="config-section tip">
+            <h2>1. Switcher Video (ATEM)</h2>
+            <select class="calc-trigger" data-price="4100" id="switcher">
+                <option value="4100">ATEM 2 M/E Constellation 4K (Standard) - 4.100 €</option>
+                <option value="1100">ATEM SDIMini Pro ISO (Buget) - 1.100 €</option>
+                <option value="9500">ATEM 4 M/E Constellation 4K (Ultra) - 9.500 €</option>
+            </select>
+            <div class="details-panel">Inima sistemului de producție live.</div>
+        </div>
+
+        <div class="config-section tip">
+            <h2>2. Workstation / Server</h2>
+            <select class="calc-trigger" data-price="4800" id="workstation">
+                <option value="4800">Mac Studio M3 Ultra (64GB RAM) - 4.800 €</option>
+                <option value="2300">Mac Studio M2 Max (32GB RAM) - 2.300 €</option>
+                <option value="3500">Custom PC Workstation (vMix Ready) - 3.500 €</option>
+            </select>
+        </div>
+
+        <div class="config-section tip">
+            <h2>3. Monitorizare Multiview</h2>
+            <select class="calc-trigger" data-price="1350" id="monitor">
+                <option value="1350">Blackmagic SmartView 4K G3 - 1.350 €</option>
+                <option value="600">Dell UltraSharp 27" 4K - 600 €</option>
+                <option value="1800">LG OLED 42" C3 (Client Monitor) - 1.800 €</option>
+            </select>
+        </div>
+
+        <div class="config-section tip">
+            <h2>4. Pachet Cablaj & Network</h2>
+            <select class="calc-trigger" data-price="1500" id="cables">
+                <option value="1500">Kit Complet Fiber/SDI 12G (100m) - 1.500 €</option>
+                <option value="500">Kit Basic Ethernet/SDI (30m) - 500 €</option>
+            </select>
+        </div>
+
+        <div class="total-box">
+            <p>Preț Final Estimat:</p>
+            <h2 id="final-price">0 €</h2>
+        </div>
+    </main>
+
+    <script>
+        function calculateTotal() {
+            let total = 0;
+            const selects = document.querySelectorAll('.calc-trigger');
+            
+            selects.forEach(select => {
+                total += parseInt(select.value);
+            });
+            
+            document.getElementById('final-price').innerText = total.toLocaleString() + ' €';
+        }
+
+        // Executa calculul la incarcare si la fiecare schimbare
+        document.querySelectorAll('.calc-trigger').forEach(s => {
+            s.addEventListener('change', calculateTotal);
+        });
+
+        window.onload = calculateTotal;
+    </script>
+</body>
+</html>
