@@ -23,23 +23,19 @@
     <main>
         <section class="tip">
             <h2>Contactează-ne</h2>
-            <p>Ai o întrebare despre Rack sau DaVinci? Trimite un mesaj.</p>
-            
             <form name="contact-studio" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact-studio" />
-                <div style="margin-bottom: 15px;">
-                    <label style="display:block; margin-bottom:5px;">Nume:</label>
-                    <input type="text" name="nume" required style="width:100%; padding:10px; border-radius:5px; border:1px solid #2d2d2d; background:#050608; color:white;">
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <label style="display:block; margin-bottom:5px;">Email:</label>
-                    <input type="email" name="email" required style="width:100%; padding:10px; border-radius:5px; border:1px solid #2d2d2d; background:#050608; color:white;">
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <label style="display:block; margin-bottom:5px;">Mesaj:</label>
-                    <textarea name="mesaj" required style="width:100%; height:100px; padding:10px; border-radius:5px; border:1px solid #2d2d2d; background:#050608; color:white;"></textarea>
-                </div>
-                <button type="submit" style="background:var(--accent); color:white; border:none; padding:12px 25px; border-radius:5px; cursor:pointer; font-weight:bold;">
+                
+                <label>Nume:</label>
+                <input type="text" name="nume" required style="width:100%; margin-bottom:15px; padding:10px; background:#050608; border:1px solid #2d2d2d; color:white;">
+                
+                <label>Email:</label>
+                <input type="email" name="email" required style="width:100%; margin-bottom:15px; padding:10px; background:#050608; border:1px solid #2d2d2d; color:white;">
+                
+                <label>Mesaj:</label>
+                <textarea name="mesaj" required style="width:100%; height:100px; margin-bottom:15px; padding:10px; background:#050608; border:1px solid #2d2d2d; color:white;"></textarea>
+                
+                <button type="submit" style="background:#6c5ce7; color:white; border:none; padding:12px 25px; border-radius:5px; cursor:pointer; font-weight:bold;">
                     Trimite Mesajul
                 </button>
             </form>
