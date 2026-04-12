@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Church Beast Configurator - DVR Tips</title>
+    <title>Configurator Ultra-Complet - DVR Tips</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .config-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 100px; }
-        .config-section { background: var(--card); padding: 20px; border-radius: 10px; border: 1px solid #2d2d2d; }
+        .config-container { display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 120px; }
+        .category-block { background: var(--card); padding: 20px; border-radius: 10px; border: 1px solid #2d2d2d; }
+        .item-row { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; color: var(--accent); margin-bottom: 5px; font-size: 0.9rem; }
         select { 
-            width: 100%; padding: 12px; background: #050608; color: white; 
-            border: 1px solid #2d2d2d; border-radius: 5px; cursor: pointer; margin-top: 10px;
+            width: 100%; padding: 10px; background: #050608; color: white; 
+            border: 1px solid #333; border-radius: 5px; cursor: pointer;
         }
         .total-sticky {
             position: fixed; bottom: 0; left: 0; width: 100%; background: #6c5ce7;
-            padding: 20px; text-align: center; z-index: 1000; box-shadow: 0 -5px 25px rgba(0,0,0,0.7);
+            padding: 15px; text-align: center; z-index: 1000; box-shadow: 0 -5px 25px rgba(0,0,0,0.8);
         }
-        .total-sticky h2 { margin: 0; font-size: 2rem; color: white; }
-        label { font-weight: bold; color: var(--accent); display: block; }
+        .total-sticky h2 { margin: 0; font-size: 1.8rem; color: white; }
+        .sub-info { font-size: 0.75rem; color: #888; margin-top: 3px; }
     </style>
 </head>
 <body>
@@ -34,55 +36,127 @@
     </nav>
 
     <main>
-        <h1>Church Beast Mode Configurator</h1>
-        <p>Configurație completă pentru transmisiuni multi-cam, ecrane LED și sunet pro.</p>
+        <h1>Configurator Professional Rack & Studio</h1>
+        
+        <div class="config-container">
+            <div class="category-block">
+                <h2>1. Sistem Camere & Optică</h2>
+                
+                <div class="item-row">
+                    <label>Corp Cameră (4 unități)</label>
+                    <select class="calc">
+                        <option value="7800">4x Blackmagic Studio Camera 4K Pro G2 - 7.800 €</option>
+                        <option value="11200">4x Blackmagic Studio Camera 6K Pro - 11.200 €</option>
+                        <option value="15600">4x Blackmagic URSA Broadcast G2 - 15.600 €</option>
+                    </select>
+                </div>
 
-        <div class="config-grid">
-            <div class="config-section">
-                <label>1. Sistem Camere (Captură)</label>
-                <select class="calc" id="camere">
-                    <option value="15000">4x Blackmagic Studio 4K Pro G2 + Obiective Leica - 15.000 €</option>
-                    <option value="28000">3x Blackmagic URSA Broadcast G2 (Beast Setup) - 28.000 €</option>
-                    <option value="6000">3x Camere PTZ 4K (Control de la distanță) - 6.000 €</option>
-                </select>
+                <div class="item-row">
+                    <label>Optică Telephoto (1 unitate)</label>
+                    <select class="calc">
+                        <option value="1600">Panasonic Leica 100-400mm f/4.0-6.3 II - 1.600 €</option>
+                        <option value="1100">Olympus M.Zuiko 100-400mm f/5.0-6.3 - 1.100 €</option>
+                        <option value="12500">Fujinon LA16x8BRM (B4 Mount Pro) - 12.500 €</option>
+                    </select>
+                </div>
+
+                <div class="item-row">
+                    <label>Optică Standard/Wide (3 unități)</label>
+                    <select class="calc">
+                        <option value="2350">Mix Panasonic Lumix (2x 12-35mm + 1x 35-100mm) - 2.350 €</option>
+                        <option value="4200">3x Olympus PRO f/2.8 (12-40mm + 40-150mm) - 4.200 €</option>
+                    </select>
+                </div>
+
+                <div class="item-row">
+                    <label>Suport & Control</label>
+                    <select class="calc">
+                        <option value="5800">4x Manfrotto 504X + Focus/Zoom Demands - 5.800 €</option>
+                        <option value="9200">4x Miller Air V2 + Focus/Zoom Demands - 9.200 €</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="config-section">
-                <label>2. Regie Video (Switcher)</label>
-                <select class="calc" id="switcher">
-                    <option value="10500">ATEM 2 M/E Constellation 4K + Advanced Panel 10 - 10.500 €</option>
-                    <option value="4500">ATEM 1 M/E Constellation 4K + Panel mic - 4.500 €</option>
-                    <option value="1500">ATEM SDI Extreme ISO (Compact) - 1.500 €</option>
-                </select>
+            <div class="category-block">
+                <h2>2. Rack & Procesare</h2>
+                
+                <div class="item-row">
+                    <label>Switcher Video</label>
+                    <select class="calc">
+                        <option value="4100">ATEM 2 M/E Constellation 4K - 4.100 €</option>
+                        <option value="9500">ATEM 4 M/E Constellation 4K - 9.500 €</option>
+                        <option value="1800">ATEM 1 M/E Constellation 4K - 1.800 €</option>
+                    </select>
+                </div>
+
+                <div class="item-row">
+                    <label>Panel Control</label>
+                    <select class="calc">
+                        <option value="6300">ATEM 2 M/E Advanced Panel 10 - 6.300 €</option>
+                        <option value="3200">ATEM 1 M/E Advanced Panel - 3.200 €</option>
+                    </select>
+                </div>
+
+                <div class="item-row">
+                    <label>Workstation (Mac Studio)</label>
+                    <select class="calc">
+                        <option value="4800">M3 Ultra (64GB RAM) + RackMount - 4.800 €</option>
+                        <option value="2400">M2 Max (32GB RAM) + RackMount - 2.400 €</option>
+                    </select>
+                </div>
+
+                <div class="item-row">
+                    <label>Interfață Captură / vMix</label>
+                    <select class="calc">
+                        <option value="1500">Sonnet Echo + DeckLink 8K Pro - 1.500 €</option>
+                        <option value="650">Blackmagic UltraStudio 4K Mini - 650 €</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="config-section">
-                <label>3. Infrastructură IP 2110</label>
-                <select class="calc" id="ip">
-                    <option value="3500">Full IP: 4x 2110 IP Converters + Switch 10Gb - 3.500 €</option>
-                    <option value="800">Sistem Clasic: SDI Patch Panel + Converters - 800 €</option>
-                </select>
+            <div class="category-block">
+                <h2>3. Rețea, Power & Infrastructură</h2>
+                
+                <div class="item-row">
+                    <label>Switch & Router</label>
+                    <select class="calc">
+                        <option value="750">UniFi Pro 24 + ASUS RT-AX88U Pro - 750 €</option>
+                        <option value="1800">Netgear M4250 (AV Line Pro) - 1.800 €</option>
+                    </select>
+                </div>
+
+                <div class="item-row">
+                    <label>Cablaj Complet (Pachet)</label>
+                    <select class="calc">
+                        <option value="1200">Cat7 S/FTP + 12G SDI + HDMI 2.1 (Premium) - 1.200 €</option>
+                        <option value="600">Cat6 UTP + 6G SDI (Standard) - 600 €</option>
+                    </select>
+                </div>
+
+                <div class="item-row">
+                    <label>Rack & Accesorii (PDU, Raft, Șuruburi)</label>
+                    <select class="calc">
+                        <option value="650">Thon 12U + ADJ PDU + Cable Management - 650 €</option>
+                        <option value="1100">Rack 24U Silent + UPS Online 2000VA - 1.100 €</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="config-section">
-                <label>4. Stație Editare & Streaming</label>
-                <select class="calc" id="pc">
-                    <option value="5500">Mac Studio M3 Ultra + DeckLink 8K Pro - 5.500 €</option>
-                    <option value="3000">PC vMix Pro (RTX 4090) - 3.000 €</option>
-                </select>
-            </div>
-
-            <div class="config-section">
-                <label>5. Cablaj, Rack & Alimentare</label>
-                <select class="calc" id="cabluri">
-                    <option value="4000">Beast Kit: 500m Cablu Fibra, Rack 24U, UPS Online - 4.000 €</option>
-                    <option value="1500">Standard: 200m SDI, Rack 12U, PDU - 1.500 €</option>
-                </select>
+            <div class="category-block">
+                <h2>4. Monitoare & Periferice</h2>
+                
+                <div class="item-row">
+                    <label>Monitorizare Studio</label>
+                    <select class="calc">
+                        <option value="1400">Dell 27" 4K + LG 32" 4K Multiview - 1.400 €</option>
+                        <option value="2800">2x Dell UltraSharp + SmartView 4K G3 - 2.800 €</option>
+                    </select>
+                </div>
             </div>
         </div>
 
         <div class="total-sticky">
-            <p style="margin:0; font-weight:bold; text-transform:uppercase; font-size:0.8rem;">Investiție Totală Estimată</p>
+            <p style="margin:0; font-weight:bold; text-transform:uppercase; font-size:0.7rem; color: #ddd;">Investiție Totală Estimată</p>
             <h2 id="total-price">0 €</h2>
         </div>
     </main>
