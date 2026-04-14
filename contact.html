@@ -9,37 +9,44 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">Dave's tips on Blackmagic</a>
+            <a href="index.html" class="logo">Dave's Tips</a>
             <div class="links">
-               <div class="links">
-    <a href="index.html">Home</a>
-    <a href="configurator.html">Configurator</a>
-    <a href="echipament.html">Echipament</a>
-    <a href="contact.html">Contact</a>
-</div>
+                <a href="index.html">Home</a>
+                <a href="configurator.html">Configurator</a>
+                <a href="echipament.html">Echipament</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <main>
-        <section class="tip">
-            <h2>Contactează-ne pentru o ofertă personalizată și vom răspunde în cel mai scurt timp.</h2>
-            <form name="contact-studio" method="POST" data-netlify="true">
+    <main style="max-width: 600px;">
+        <div class="tip-card" style="margin-top: 50px;">
+            <h1 style="color: var(--accent); margin-bottom: 10px;">Contactează-ne</h1>
+            <p style="color: var(--text-dim);">Ai întrebări despre workflow-ul Blackmagic? Suntem aici să te ajutăm.</p>
+            
+            <form name="contact-studio" method="POST" data-netlify="true" style="margin-top: 30px;">
                 <input type="hidden" name="form-name" value="contact-studio" />
-                
-                <label>Nume:</label>
-                <input type="text" name="nume" required style="width:100%; margin-bottom:15px; padding:10px; background:#050608; border:1px solid #2d2d2d; color:white;">
-                
-                <label>Email:</label>
-                <input type="email" name="email" required style="width:100%; margin-bottom:15px; padding:10px; background:#050608; border:1px solid #2d2d2d; color:white;">
-                
-                <label>Mesaj:</label>
-                <textarea name="mesaj" required style="width:100%; height:100px; margin-bottom:15px; padding:10px; background:#050608; border:1px solid #2d2d2d; color:white;"></textarea>
-                
-                <button type="submit" style="background:#6c5ce7; color:white; border:none; padding:12px 25px; border-radius:5px; cursor:pointer; font-weight:bold;">
-                    Trimite Mesajul
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom:8px; font-size: 0.8rem; text-transform: uppercase;">Nume</label>
+                    <input type="text" name="nume" required style="width:100%; padding:12px; background:#000; border:1px solid var(--border); color:white; border-radius: 4px;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="display:block; margin-bottom:8px; font-size: 0.8rem; text-transform: uppercase;">Email</label>
+                    <input type="email" name="email" required style="width:100%; padding:12px; background:#000; border:1px solid var(--border); color:white; border-radius: 4px;">
+                </div>
+
+                <div style="margin-bottom: 30px;">
+                    <label style="display:block; margin-bottom:8px; font-size: 0.8rem; text-transform: uppercase;">Mesaj</label>
+                    <textarea name="mesaj" required style="width:100%; height:120px; padding:12px; background:#000; border:1px solid var(--border); color:white; border-radius: 4px; resize: none;"></textarea>
+                </div>
+
+                <button type="submit" style="width:100%; background:var(--accent); color:black; border:none; padding:15px; border-radius:4px; cursor:pointer; font-weight:bold; text-transform: uppercase;">
+                    Trimite Solicitarea
                 </button>
             </form>
-        </section>
+        </div>
     </main>
 </body>
 </html>

@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurări Rack</title>
+    <title>Configurator - DVR Tips</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        select:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 5px rgba(255, 126, 51, 0.5);
-}
-
-.total-sticky h2 {
-    color: #000; /* Text negru pe fundal portocaliu pentru contrast maxim */
-    font-weight: 900;
-}
+        select { width: 100%; padding: 12px; background: #000; color: white; border: 1px solid var(--border); border-radius: 4px; margin-top: 10px; cursor: pointer; }
+        select:hover { border-color: var(--accent); }
+        .total-box { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--accent); padding: 20px; text-align: center; border-top: 3px solid #000; }
+        .total-box h2 { color: #000; margin: 0; font-size: 2rem; font-weight: 900; }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">Dave's tips on Blackmagic</a>
+            <a href="index.html" class="logo">Dave's Tips</a>
             <div class="links">
                 <a href="index.html">Home</a>
                 <a href="configurator.html">Configurator</a>
@@ -31,145 +25,47 @@
         </div>
     </nav>
 
-    <main>
-        <h1>Church Beast Configurator</h1>
-        <p>Alege între variantele IP Edition, Windows Beast sau Mobile Mac. Setează pe "NONE" pentru componentele pe care le deții deja.</p>
-        
-        <div class="config-container">
-            <div class="category-block">
-                <h2>1. Sistem Camere & Optică (4 Unități)</h2>
-                
-                <div class="item-row">
-                    <label>Corp Cameră & Obiective</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="11500">IP Edition: 4x Studio 4K Pro G2 + Lumix f/2.8 - 11.500 €</option>
-                        <option value="12200">Broadcast Beast: 4x Studio 4K Pro G2 + Olympus PRO 40-150mm - 12.200 €</option>
-                        <option value="18500">Cinematic Elite: 4x Studio 6K Pro + Sigma Art f/1.8 - 18.500 €</option>
-                        <option value="5500">Lean & Mobile: 4x Micro Studio 4K G2 + Olympus f/1.8 - 5.500 €</option>
-                    </select>
-                </div>
+    <main style="margin-bottom: 150px;">
+        <h1 style="text-align: center; margin: 40px 0;">Beast Church Configurator</h1>
 
-                <div class="item-row">
-                    <label>Control & Suport (Trepiede/Demands)</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="5800">Standard: 4x Manfrotto 504X + Focus/Zoom Demands - 5.800 €</option>
-                        <option value="9500">Elite: 4x Sachtler Flowtech 75 + Focus/Zoom Demands - 9.500 €</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="category-block">
-                <h2>2. Switcher & Control Panel</h2>
-                
-                <div class="item-row">
-                    <label>Switcher ATEM</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="4100">ATEM 2 M/E Constellation 4K (Standard) - 4.100 €</option>
-                        <option value="9500">ATEM 4 M/E Constellation 4K (Elite) - 9.500 €</option>
-                        <option value="3800">ATEM Television Studio HD8 ISO (Mobile) - 3.800 €</option>
-                    </select>
-                </div>
-
-                <div class="item-row">
-                    <label>Control Panel</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="6300">ATEM 2 M/E Advanced Panel 10 - 6.300 €</option>
-                        <option value="3200">ATEM 1 M/E Advanced Panel - 3.200 €</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="category-block">
-                <h2>3. Workstation vMix / Streaming</h2>
-                
-                <div class="item-row">
-                    <label>Unitate Centrală</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="4800">Mac Studio M3 Ultra (Pro-Streamer) - 4.800 €</option>
-                        <option value="3500">PC Rackmount (i9, RTX 3080) - 3.500 €</option>
-                        <option value="2200">MacBook Pro M3 Pro (Mobile) - 2.200 €</option>
-                    </select>
-                </div>
-
-                <div class="item-row">
-                    <label>Sistem Captură (DeckLink/UltraStudio)</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="1500">Sonnet Echo SE III + DeckLink 8K Pro - 1.500 €</option>
-                        <option value="1100">DeckLink 8K Pro + Quad HDMI (PC Direct) - 1.100 €</option>
-                        <option value="650">UltraStudio 4K Mini (Thunderbolt) - 650 €</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="category-block">
-                <h2>4. Rack, Networking & IP Converters</h2>
-                
-                <div class="item-row">
-                    <label>Nucleu IP / Convertoare</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="650">1x 2110 IP Converter 4x12G - 650 €</option>
-                        <option value="1300">2x 2110 IP Converter (Redundanță) - 1.300 €</option>
-                    </select>
-                </div>
-
-                <div class="item-row">
-                    <label>Networking (Switch/Router)</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="750">Ubiquiti Pro 24 + ASUS RT-AX88U - 750 €</option>
-                        <option value="1800">Netgear M4250 (AV Line) - 1.800 €</option>
-                    </select>
-                </div>
-
-                <div class="item-row">
-                    <label>Rack, PDU & Cablaj</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="2500">Beast Kit (Thon 12U, Cat7, SDI 12G, PDU) - 2.500 €</option>
-                        <option value="1200">Mobile Kit (Rack 6U, Cablaj Standard) - 1.200 €</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="category-block">
-                <h2>5. Monitorizare & Accesorii</h2>
-                
-                <div class="item-row">
-                    <label>Monitoare Multiview/Edit</label>
-                    <select class="calc">
-                        <option value="0">NONE - 0 €</option>
-                        <option value="2200">LG 32" 4K + Dell UltraSharp 27" 4K + SmartView 4K - 2.200 €</option>
-                        <option value="900">Dual Monitor Standard Setup - 900 €</option>
-                    </select>
-                </div>
-            </div>
+        <div class="tip-card">
+            <h2>Pachet Camere</h2>
+            <select class="calc" onchange="updatePrice()">
+                <option value="0">NONE - 0 €</option>
+                <option value="11500">Pro-Streamer IP (4x Studio 4K + Lumix) - 11.500 €</option>
+                <option value="18500">Cinematic Elite (4x Studio 6K + Sigma) - 18.500 €</option>
+            </select>
         </div>
 
-        <div class="total-sticky">
-            <p style="margin:0; font-weight:bold; text-transform:uppercase; font-size:0.8rem; color: #eee;">Preț Total Investiție</p>
-            <h2 id="total-price">0 €</h2>
+        <div class="tip-card">
+            <h2>Regie & Switcher</h2>
+            <select class="calc" onchange="updatePrice()">
+                <option value="0">NONE - 0 €</option>
+                <option value="4100">ATEM 2 M/E Constellation 4K - 4.100 €</option>
+                <option value="3800">ATEM Television Studio HD8 ISO - 3.800 €</option>
+            </select>
+        </div>
+
+        <div class="tip-card">
+            <h2>Workstation vMix</h2>
+            <select class="calc" onchange="updatePrice()">
+                <option value="0">NONE - 0 €</option>
+                <option value="4800">Mac Studio M3 Ultra - 4.800 €</option>
+                <option value="3500">PC Custom (i9 + RTX 3080) - 3.500 €</option>
+            </select>
         </div>
     </main>
+
+    <div class="total-box">
+        <h2 id="total-price">0 €</h2>
+    </div>
 
     <script>
         function updatePrice() {
             let total = 0;
-            const allSelects = document.querySelectorAll('.calc');
-            allSelects.forEach(select => {
-                total += parseInt(select.value);
-            });
+            document.querySelectorAll('.calc').forEach(s => total += parseInt(s.value));
             document.getElementById('total-price').innerText = total.toLocaleString('ro-RO') + ' €';
         }
-
-        document.querySelectorAll('.calc').forEach(s => s.addEventListener('change', updatePrice));
-        window.onload = updatePrice;
     </script>
 </body>
 </html>
